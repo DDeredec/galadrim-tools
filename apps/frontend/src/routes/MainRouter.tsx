@@ -52,6 +52,8 @@ const AtopLogsPage = React.lazy(() => import("../pages/atopLogs/AtopLogsPage"));
 // ? this was the old cheat page
 // const CodeNamesPage = React.lazy(() => import('../pages/codeNames/CodeNamesPage'))
 
+const HomePageV2 = React.lazy(() => import("../v2/pages/HomePage"));
+
 const MainRouter = () => {
     return (
         <>
@@ -119,6 +121,9 @@ const AppRoutes = () => {
                 <Route path="/galadrim/scam/winner/omg" element={<ScamWinnerPage />} />
                 <Route path="/caddyLogs/:id" element={<CaddyLogsPage />} />
                 <Route path="/atopLogs/:id" element={<AtopLogsPage />} />
+
+                {/* v2 temporary pages */}
+                <Route path="/v2" element={<HomePageV2 />} />
 
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
